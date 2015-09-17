@@ -1,0 +1,285 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: rgba(50, 50, 50, 1);
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+  margin:0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+}
+
+section {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 60vh 0;
+  position: relative;
+  width: 100vw;
+}
+
+section:before {
+  background-position: 50% 50%;
+  background-size: cover;
+  content: "";
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+
+#about-us:before {
+  background-image: url("http://i.telegraph.co.uk/multimedia/archive/02857/Syria_Refugees_Zah_2857798k.jpg");
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+#the-location {
+  background-image: url("http://media.timeout.com/images/102418939/image.jpg");
+  background-position: center -400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.container {
+  background: rgba(255, 255, 255, 1);
+  display: block;
+  width: 100vw;
+  min-height: 80vh;
+}
+
+.display-mobile {
+  display: block;
+}
+
+/*----------------------------------------------------------------------------*/
+
+.header {
+  background: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(175, 175, 175, 1);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.mobile-nav-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  color: rgba(50, 50, 50, 1);
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  outline: 0;
+  padding: .8em;
+  width: 100vw;
+}
+
+.active-nav .mobile-nav-button {
+  border-bottom: 1px solid rgba(175, 175, 175, 1);
+}
+
+.mobile-nav-label {
+  float: left;
+  text-transform: uppercase;
+}
+
+.mobile-nav-icon {
+  float: right;
+  padding-top: .2em;
+}
+
+.active-nav .fa-plus {
+  display: none;
+}
+
+.fa-minus {
+  display: none;
+}
+
+.active-nav .fa-minus {
+  display: block;
+}
+
+.header-nav-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.active-nav .header-nav-list {
+  display: block;
+}
+
+.header-nav-item {
+  display: block;
+  text-align: center;
+}
+
+.header-nav-link {
+  color: rgba(50, 50, 50, 1);
+  display: block;
+  font-size: 1.6em;
+  padding: .8em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+.header-nav-link:hover {
+  color: rgba(150, 150, 150, 1);
+  transform: scale(1.033, 1.033);
+}
+
+.hero-image {
+  width: 100vw;
+  height: auto;
+  max-height: 100vh;
+}
+
+.section-title,
+.section-text {
+  margin: 0;
+  padding: 0 2%;
+  width: 100vw;
+}
+
+@media (min-width: 768px) {
+  .section-title,
+  .section-text {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0;
+  }
+
+  .section-title {
+    padding-top: 1.8em;
+  }
+
+  .section-text {
+    margin-top: 2em;
+  }
+}
+
+.section-title {}
+
+.section-text {
+  font-family: sans-serif;
+}
+
+.footer {
+  background: rgba(255, 255, 255, 1);
+  border-top: 1px solid rgba(175, 175, 175, 1);
+  margin: 2em 0 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.footer-social-links {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 1.6em 0 2.4em;
+  text-align: center;
+}
+
+.footer-social-item {
+  display: inline-block;
+  margin-left: .4em;
+}
+
+.social-link {
+  background: rgba(50, 50, 50, 1);
+  color: rgba(255, 255, 255, 1);
+  display: block;
+  font-size: 1.6em;
+  overflow: hidden;
+  line-height: 1.6em;
+  padding: .2em .4em 0 .4em;
+  width: 1.6em;
+  transition: all .3s ease-in-out;
+}
+
+.social-link.facebook:hover {
+  background-color: rgba(76, 102, 164, 1);
+}
+
+.social-link.google-plus:hover {
+  background-color: rgba(213, 15, 37, 1);
+}
+
+.social-link.twitter:hover {
+  background-color: rgba(85, 172, 238, 1);
+}
+
+.copyright {
+  display: block;
+  font-size: .8em;
+  padding: .8em 0 0 .8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .display-mobile {
+    display: none;
+  }
+
+  .header-nav-list {
+    display: block;
+    float: right;
+    height: auto;
+    padding-right: 1.2em;
+  }
+
+  .header-nav-item {
+    display: inline-block;
+  }
+
+  .header-nav-link {
+    font-size: 1.2em;
+    padding: 1.6em .4em;
+  }
+
+  .footer-social-links {
+    float: right;
+    padding-right: 2em;
+  }
+
+  .social-link {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    width: 1.2em;
+    padding: .4em .4em .2em .4em;
+  }
+
+  .copyright {
+    float: left;
+    padding: 3.2em 0 0 2em;
+    text-align: left;
+  }
+}
